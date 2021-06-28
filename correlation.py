@@ -38,7 +38,7 @@ def compute_correlations(fileName):
     for d in parsed_data:
         for e in d["events"]:
             if e not in myDict:
-                cor = compute_phi(parsed_data,e)
+                cor = compute_phi(fileName,e)
                 myDict[e] = cor
     return myDict
 def diagnose(fileName):
