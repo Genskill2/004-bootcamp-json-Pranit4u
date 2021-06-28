@@ -6,8 +6,11 @@ def load_journal(fileName):
     data = f.read()
     parsed_data = json.loads(data)
     return parsed_data
-def compute_phi(parsed_data,event):
+def compute_phi(fileName,event):
     n11 = n00 = n10 = n01 = n1_ = n0_ = n_1 = n_0 = 0
+    f = open(fileName)
+    data = f.read()
+    parsed_data = json.loads(data)
     for i in parsed_data:
         ev = event in i["events"]
         sq = i["squirrel"]
